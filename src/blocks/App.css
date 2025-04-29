@@ -1,0 +1,9 @@
+.page {
+  min-height: 100vh;
+}
+
+.page__content {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+}

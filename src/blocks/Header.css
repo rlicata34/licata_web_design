@@ -1,0 +1,55 @@
+.header {
+  position: sticky;
+  top: 0;
+  padding: 20px 40px;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  background: linear-gradient(to right, #232526, #414345);
+}
+
+.header_scrolled {
+  background: #000;
+}
+
+.nav {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.nav__logo {
+  margin: 0;
+  font-size: 44px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav__links {
+  display: flex;
+  gap: 20px;
+  color: #fff;
+}
+
+.nav__about {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav__portfolio {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav__services {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav__contact {
+  text-decoration: none;
+  color: #fff;
+}
