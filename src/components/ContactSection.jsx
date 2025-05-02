@@ -71,6 +71,7 @@ function ContactSection() {
           method="POST"
           data-netlify="true"
           className="form"
+          netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
         >
           <div className="form__container">
@@ -188,6 +189,12 @@ function ContactSection() {
               onChange={handleCaptcha}
             />
           </div>
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out: <input name="bot-field" />
+            </label>
+          </p>
 
           <button type="submit" className="form__submitbtn">
             Submit
