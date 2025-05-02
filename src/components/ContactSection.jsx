@@ -12,9 +12,8 @@ function ContactSection() {
     website: "",
     projectDetails: "",
   });
-  const [isButtonActive, setIsButtonActive] = useState(false);
-  const [captchaToken, setCaptchaToken] = useState(null);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [isButtonActive, setIsButtonActive] = useState(false);
+  // const [captchaToken, setCaptchaToken] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -36,8 +35,9 @@ function ContactSection() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e) => {
-    setIsSubmitted(true);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   return (
@@ -62,7 +62,6 @@ function ContactSection() {
           data-netlify="true"
           className="form"
           netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
           <p hidden>
