@@ -179,10 +179,7 @@ function ContactSection() {
           </div>
 
           <div className="form__container">
-            <ReCAPTCHA
-              sitekey="6LfzVisrAAAAAOP1rgX7RRDoAVxfqZTgSrir0REX"
-              onChange={handleCaptcha}
-            />
+            <ReCAPTCHA sitekey="6LfzVisrAAAAAOP1rgX7RRDoAVxfqZTgSrir0REX" />
           </div>
 
           <button type="submit" className="form__submitbtn">
