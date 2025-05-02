@@ -36,31 +36,9 @@ function ContactSection() {
     return () => observer.disconnect();
   }, []);
 
-  const handleChange = (evt) => {
-    const { name, value } = evt.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  const handleSubmit = (e) => {
+    setIsSubmitted(true);
   };
-
-  const handleCaptcha = (token) => {
-    setCaptchaToken(token);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
-  };
-
-  document.querySelector("form").addEventListener("submit", handleSubmit);
 
   return (
     <section
@@ -86,6 +64,12 @@ function ContactSection() {
           netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
         >
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out: <input name="bot-field" />
+            </label>
+          </p>
           <div className="form__container">
             <div className="form__input-wrapper">
               <input
@@ -201,12 +185,6 @@ function ContactSection() {
               onChange={handleCaptcha}
             />
           </div>
-          <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
-            <label>
-              Don’t fill this out: <input name="bot-field" />
-            </label>
-          </p>
 
           <button type="submit" className="form__submitbtn">
             Submit
