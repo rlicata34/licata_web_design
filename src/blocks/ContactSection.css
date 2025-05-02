@@ -1,0 +1,113 @@
+.contact {
+  padding: 100px 50px 100px 0;
+  max-width: 1440px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  margin: 0 auto;
+}
+
+.contact--fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f7fa;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact__title {
+  font-size: 48px;
+  margin-left: 100px;
+}
+
+.contact__text {
+  font-size: 20px;
+  margin-left: 100px;
+  font-weight: 300;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  padding: 100px 25px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.form__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form__input-wrapper {
+  position: relative;
+}
+
+.form__input-wrapper input,
+.form__input-wrapper textarea {
+  width: 90%;
+  padding: 15px 8px 0;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 17px;
+  border-radius: 5px;
+  width: 370px;
+}
+
+.form__input-wrapper textarea {
+  width: 97.8%;
+  height: 80px;
+  padding: 25px 8px 0;
+}
+
+.form__input-wrapper label {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  color: #555;
+  padding: 0 4px;
+  transition: 0.2s ease all;
+}
+
+.form__input-wrapper input:focus + label,
+.form__input-wrapper textarea:focus + label,
+.form__label--active {
+  top: 2px;
+  font-size: 14px;
+}
+
+.form__text {
+  margin: 3px 0 20px;
+  color: #999;
+  font-weight: 300;
+}
+
+.form__submitbtn {
+  width: 200px;
+  height: 60px;
+  margin: 10px auto 0;
+  font-size: 20px;
+  background: #4ca1af;
+  transition: background-color 0.3s ease;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form__submitbtn:hover {
+  background-color: #357f89;
+}

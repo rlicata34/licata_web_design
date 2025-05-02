@@ -8,7 +8,7 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      if (offset > 80) {
+      if (offset > 180) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -27,7 +27,27 @@ function Header() {
   return (
     <header className={headerClass}>
       <nav className="nav">
-        <h1 className="nav__logo">LicataWebDesign</h1>
+        <h1
+          className="animated-logo"
+          id="logo"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <span>L</span>
+          <span>i</span>
+          <span>c</span>
+          <span>a</span>
+          <span>t</span>
+          <span>a</span>
+          <span>W</span>
+          <span>e</span>
+          <span>b</span>
+          <span>D</span>
+          <span>e</span>
+          <span>s</span>
+          <span>i</span>
+          <span>g</span>
+          <span>n</span>
+        </h1>
         <div className="nav__links">
           <a href="#about" className="nav__about">
             About
