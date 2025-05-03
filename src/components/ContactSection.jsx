@@ -64,12 +64,7 @@ function ContactSection() {
           netlify-honeypot="bot-field"
           action="/success"
         >
-          <input type="hidden" name="contact" value="contact" />
-          <p hidden>
-            <label>
-              Don’t fill this out: <input name="bot-field" />
-            </label>
-          </p>
+          <input type="hidden" name="form-name" value="contact" />
           <div className="form__container">
             <div className="form__input-wrapper">
               <input
