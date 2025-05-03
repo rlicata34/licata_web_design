@@ -38,6 +38,7 @@ function ContactSection() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
+    console.log(e);
   };
 
   return (
@@ -62,6 +63,7 @@ function ContactSection() {
           data-netlify="true"
           className="form"
           netlify-honeypot="bot-field"
+          action="/success"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="form__container">
