@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 // import Cleave from "cleave.js/react";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 import "../blocks/ContactSection.css";
 
@@ -162,11 +162,6 @@ function ContactSection() {
               details in the above box.
             </p>
           </div>
-
-          <div className="form__container">
-            <ReCAPTCHA sitekey="6LfzVisrAAAAAOP1rgX7RRDoAVxfqZTgSrir0REX" />
-          </div>
-
           <button type="submit" className="form__submitbtn">
             Submit
           </button>
