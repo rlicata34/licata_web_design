@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import Cleave from "cleave.js/react";
+// import Cleave from "cleave.js/react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import "../blocks/ContactSection.css";
@@ -56,13 +56,7 @@ function ContactSection() {
           </p>
         </div>
 
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          className="form"
-          netlify-honeypot="bot-field"
-        >
+        <form name="contact" method="POST" className="form">
           <input type="hidden" name="form-name" value="contact" />
           <div className="form__container">
             <div className="form__input-wrapper">
@@ -108,14 +102,10 @@ function ContactSection() {
 
           <div className="form__container">
             <div className="form__input-wrapper">
-              <Cleave
+              <input
                 className="form__input"
+                type="tel"
                 name="phone"
-                options={{
-                  delimiters: ["(", ") ", "-", ""],
-                  blocks: [0, 3, 3, 4],
-                  numericOnly: true,
-                }}
                 value={formData.phone}
                 onChange={handleChange}
                 required
