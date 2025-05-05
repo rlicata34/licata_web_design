@@ -1,6 +1,5 @@
-import { useState, useEffect, useRef } from "react";
-// import Cleave from "cleave.js/react";
-// import ReCAPTCHA from "react-google-recaptcha";
+import { useState } from "react";
+import useScrollFadeInClass from "../hooks/useScrollFadeInClass";
 
 import "../blocks/ContactSection.css";
 
@@ -13,27 +12,8 @@ function ContactSection() {
     projectDetails: "",
   });
   // const [isButtonActive, setIsButtonActive] = useState(false);
-  // const [captchaToken, setCaptchaToken] = useState(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); // stops observing after first trigger
-        }
-      },
-      { threshold: 0.4 } // Trigger when 40% visible
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const { ref, isVisible } = useScrollFadeInClass();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,7 +23,7 @@ function ContactSection() {
   return (
     <section
       className={`contact ${isVisible ? "contact--fade-up" : ""}`}
-      ref={sectionRef}
+      ref={ref}
       id="contact"
     >
       <div className="contact__content">

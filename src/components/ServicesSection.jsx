@@ -1,34 +1,15 @@
-import { useState, useEffect, useRef } from "react";
+import useScrollFadeInClass from "../hooks/useScrollFadeInClass";
 
 import "../blocks/ServicesSection.css";
 
 function ServicesSection() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); // stops observing after first trigger
-        }
-      },
-      { threshold: 0.4 } // Trigger when 40% visible
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const { ref, isVisible } = useScrollFadeInClass();
 
   return (
     <section
       id="services"
       className={`services ${isVisible ? "services--fade-up" : ""}`}
-      ref={sectionRef}
+      ref={ref}
     >
       <h2 className="services__title">My Services</h2>
       <p className="services__intro">

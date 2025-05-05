@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
+import PortfolioSection from "./PortfolioSection";
 import ServicesSection from "./ServicesSection";
 import ContactSection from "../components/ContactSection";
 import BackToTop from "../components/BackToTop";
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <main>
           <HeroSection />
+          <PortfolioSection />
           <ServicesSection />
           <ContactSection />
         </main>
