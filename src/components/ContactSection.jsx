@@ -28,9 +28,9 @@ function ContactSection() {
     >
       <div className="contact__content">
         <div className="contact__container">
-          <h2 className="contact__title">Contact Us</h2>
+          <h2 className="contact__title">Contact Me</h2>
           <p className="contact__text">
-            We'd love to hear from you.
+            I'd love to hear from you.
             <br />
             Let's build something great together.
           </p>

@@ -100,7 +100,7 @@
   height: 60px;
   margin: 10px auto 0;
   font-size: 20px;
-  background: #4ca1af;
+  background: #016a7a;
   transition: background-color 0.3s ease;
   color: #fff;
   border: none;
@@ -109,5 +109,5 @@
 }
 
 .form__submitbtn:hover {
-  background-color: #357f89;
+  background-color: #729397;
 }

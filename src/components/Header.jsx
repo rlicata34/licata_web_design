@@ -49,14 +49,14 @@ function Header() {
           <span>n</span>
         </h1>
         <div className="nav__links">
-          <a href="#about" className="nav__about">
-            About
-          </a>
           <a href="#portfolio" className="nav__portfolio">
             Portfolio
           </a>
           <a href="#services" className="nav__services">
             Services
+          </a>
+          <a href="#about" className="nav__about">
+            About
           </a>
           <a href="#contact" className="nav__contact">
             Contact

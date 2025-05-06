@@ -7,7 +7,10 @@ function BackToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 300);
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const pageHeight = document.documentElement.scrollHeight;
+
+      setIsVisible(pageHeight - scrollPosition < 200);
     };
 
     window.addEventListener("scroll", toggleVisibility);

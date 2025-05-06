@@ -49,7 +49,7 @@
   display: inline-block;
   margin: 20px 185px 0 auto;
   padding: 15px 28px;
-  background: #4ca1af;
+  background: #016a7a;
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -58,7 +58,7 @@
 }
 
 .hero__button:hover {
-  background-color: #357f89;
+  background-color: #729397;
 }
 
 @keyframes fadeUp {
