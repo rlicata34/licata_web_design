@@ -16,18 +16,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5f7fa;
+  background-color: #e9f1fc;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
 
 .contact__title {
   font-size: 48px;
-  margin-left: 100px;
+  margin: 0 20px 30px 80px;
 }
 
 .contact__text {
   font-size: 20px;
-  margin-left: 100px;
+  margin: 0 20px 0 80px;
   font-weight: 300;
 }
 
@@ -100,7 +100,7 @@
   height: 60px;
   margin: 10px auto 0;
   font-size: 20px;
-  background: #016a7a;
+  background: #6282af;
   transition: background-color 0.3s ease;
   color: #fff;
   border: none;
@@ -109,5 +109,5 @@
 }
 
 .form__submitbtn:hover {
-  background-color: #729397;
+  background-color: #3166b1;
 }

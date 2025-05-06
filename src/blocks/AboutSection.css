@@ -1,0 +1,44 @@
+.about {
+  max-width: 1440px;
+  padding: 100px 20px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about--fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about__content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about__image {
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 420px;
+  height: 420px;
+}
+
+.about__container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about__title {
+  font-size: 48px;
+  margin: 0 0 40px;
+}
+
+.about__text {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 0 20px;
+}

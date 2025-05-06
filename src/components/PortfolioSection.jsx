@@ -14,7 +14,7 @@ export default function PortfolioSection() {
         }`}
         ref={ref}
       >
-        <h2 className="portfolio__title">My Work</h2>
+        <h2 className="portfolio__title">See My Work</h2>
         <p className="portfolio__subtitle">
           Apps I created through the TripleTen software engineering program and
           websites I’ve crafted to help small businesses stand out online.

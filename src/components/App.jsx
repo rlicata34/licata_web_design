@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import PortfolioSection from "./PortfolioSection";
 import ServicesSection from "./ServicesSection";
+import AboutSection from "./AboutSection";
 import ContactSection from "../components/ContactSection";
 import BackToTop from "../components/BackToTop";
 import "../blocks/App.css";
@@ -14,8 +15,9 @@ function App() {
         <Header />
         <main>
           <HeroSection />
-          <PortfolioSection />
           <ServicesSection />
+          <PortfolioSection />
+          <AboutSection />
           <ContactSection />
         </main>
         <BackToTop />
