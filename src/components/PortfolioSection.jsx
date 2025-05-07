@@ -16,7 +16,7 @@ export default function PortfolioSection() {
       >
         <h2 className="portfolio__title">See My Work</h2>
         <p className="portfolio__subtitle">
-          Apps I created through the TripleTen software engineering program and
+          Apps I created within the TripleTen software engineering program and
           websites I’ve crafted to help small businesses stand out online.
         </p>
 

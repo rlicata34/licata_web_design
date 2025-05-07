@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import PortfolioSection from "./PortfolioSection";
@@ -6,6 +5,7 @@ import ServicesSection from "./ServicesSection";
 import AboutSection from "./AboutSection";
 import ContactSection from "../components/ContactSection";
 import BackToTop from "../components/BackToTop";
+import Footer from "./Footer";
 import "../blocks/App.css";
 
 function App() {
@@ -19,8 +19,10 @@ function App() {
           <PortfolioSection />
           <AboutSection />
           <ContactSection />
+          <BackToTop />
         </main>
-        <BackToTop />
+
+        <Footer />
       </div>
     </div>
   );

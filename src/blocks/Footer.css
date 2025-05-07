@@ -1,0 +1,27 @@
+.footer {
+  background-color: #000;
+}
+
+.footer__content {
+  max-width: 1440px;
+  padding: 40px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+}
+
+.footer__copyright {
+  color: #fff;
+  margin: 0;
+  font-weight: 300;
+}
+
+.footer__link {
+  height: 25px;
+}
+
+.footer__link-image {
+  width: 100px;
+}
