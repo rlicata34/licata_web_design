@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function useScrollFadeInClass(threshold = 0.4) {
+export default function useScrollFadeInClass(threshold = 0.2) {
   const ref = useRef(null);
   const [isVisible, setVisible] = useState(false);
 

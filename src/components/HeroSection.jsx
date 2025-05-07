@@ -15,7 +15,7 @@ function HeroSection() {
         </div>
         <div className="hero__container">
           <p className="hero__description">
-            Elevate your online presence with Licata Web Design. We build clean,
+            Elevate your online presence with Licata Web Design. I build clean,
             responsive websites that help small businesses stand out. Ready to
             upgrade your site and grow your business?
           </p>
