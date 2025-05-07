@@ -1,5 +1,5 @@
 .hero {
-  height: 100vh;
+  height: 900px;
   margin: 0;
   padding: 20px 40px;
   background: linear-gradient(to right, #232526, #414345);
@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  margin: 100px auto 0;
   padding: 0 0 100px;
   color: #fff;
   opacity: 0;

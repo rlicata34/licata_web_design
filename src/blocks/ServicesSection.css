@@ -1,5 +1,5 @@
 .services {
-  padding: 100px 20px;
+  padding: 100px 40px;
   text-align: center;
   opacity: 0;
   transform: translateY(40px);
@@ -71,7 +71,7 @@
 
 @media screen and (max-width: 450px) {
   .services {
-    padding: 30px 15px;
+    padding: 50px 15px;
   }
   .services__title {
     font-size: 27px;
