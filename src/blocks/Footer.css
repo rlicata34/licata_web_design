@@ -4,7 +4,7 @@
 
 .footer__content {
   max-width: 1440px;
-  padding: 40px 0;
+  padding: 35px 0;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -24,4 +24,33 @@
 
 .footer__link-image {
   width: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .footer__content {
+    padding: 20px 0;
+  }
+
+  .footer__copyright {
+    font-size: 14px;
+  }
+
+  .footer__link {
+    height: 22px;
+  }
+
+  .footer__link-image {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer__content {
+    padding: 15px 0;
+    gap: 30px;
+  }
+
+  .footer__copyright {
+    font-size: 12px;
+  }
 }

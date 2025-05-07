@@ -8,7 +8,7 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      if (offset > 180) {
+      if (offset > 80) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -16,16 +16,15 @@ function Header() {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const headerClass = scrolled ? "header header_scrolled" : "header";
-
   return (
-    <header className={headerClass}>
+    <header className={`header ${scrolled ? "header_scrolled" : ""}`}>
       <nav className="nav">
         <h1
           className="animated-logo"

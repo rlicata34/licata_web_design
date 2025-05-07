@@ -119,6 +119,10 @@
 }
 
 @media screen and (max-width: 800px) {
+  .animated-logo {
+    font-size: 28px;
+  }
+
   .nav__links {
     display: none;
   }
@@ -131,5 +135,15 @@
     height: 24px;
     margin-left: auto;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .header {
+    padding: 0 10px;
+  }
+
+  .animated-logo {
+    font-size: 22px;
   }
 }

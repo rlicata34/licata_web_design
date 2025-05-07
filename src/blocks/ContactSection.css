@@ -14,6 +14,7 @@
 
 .contact__content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #e9f1fc;
@@ -34,10 +35,12 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 800px;
+  max-width: 800px;
+  width: 100%;
   padding: 100px 25px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  box-sizing: border-box;
 }
 
 .form__container {
@@ -49,11 +52,12 @@
 
 .form__input-wrapper {
   position: relative;
+  flex: 1;
 }
 
 .form__input-wrapper input,
 .form__input-wrapper textarea {
-  width: 90%;
+  width: 95%;
   padding: 15px 8px 0;
   height: 40px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -61,7 +65,6 @@
   color: rgba(0, 0, 0, 0.8);
   font-size: 17px;
   border-radius: 5px;
-  width: 370px;
 }
 
 .form__input-wrapper textarea {
@@ -110,4 +113,103 @@
 
 .form__submitbtn:hover {
   background-color: #4a91b8;
+}
+
+@media screen and (max-width: 1300px) {
+  .contact__title {
+    font-size: 40px;
+    margin: 0 0 30px 60px;
+  }
+
+  .contact__text {
+    font-size: 18px;
+    margin: 0 0 0 60px;
+    font-weight: 300;
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .contact {
+    padding: 50px 0 30px 0;
+  }
+
+  .contact__title {
+    margin: 0;
+  }
+
+  .contact__text {
+    margin: 0;
+  }
+
+  .contact__content {
+    flex-direction: column;
+    padding: 50px 0;
+    gap: 30px;
+  }
+
+  .form {
+    padding: 50px 25px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .form {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .contact__title {
+    font-size: 30px;
+  }
+
+  .contact__text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact__content {
+    padding: 20px 0;
+  }
+  .contact__title {
+    font-size: 25px;
+  }
+
+  .contact__text {
+    font-size: 14px;
+  }
+
+  .form {
+    width: 100%;
+    border-radius: 0;
+    padding: 25px 25px;
+  }
+
+  .form__container {
+    flex-direction: column;
+  }
+
+  .form__input-wrapper input {
+    width: 95%;
+    padding: 10px 8px 0;
+  }
+
+  .form__input-wrapper label {
+    font-size: 14px;
+  }
+
+  .form__input-wrapper textarea {
+    width: 95%;
+    padding: 10px 8px 0;
+  }
+
+  .form__submitbtn {
+    width: 150px;
+    height: 40px;
+    margin: 10px auto 0;
+    font-size: 16px;
+  }
 }

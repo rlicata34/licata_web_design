@@ -6,7 +6,11 @@ function AboutSection() {
   const { ref, isVisible } = useScrollFadeInClass();
 
   return (
-    <section className={`about ${isVisible ? "about--fade-up" : ""}`} ref={ref}>
+    <section
+      className={`about ${isVisible ? "about--fade-up" : ""}`}
+      ref={ref}
+      id="about"
+    >
       <div className="about__content">
         <img
           src={aboutImage}
