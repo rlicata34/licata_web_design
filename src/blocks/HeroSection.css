@@ -9,9 +9,9 @@
 .hero__content {
   max-width: 1440px;
   height: 100vh;
-  position: relative;
+
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 0 0 100px;
   color: #fff;
@@ -20,15 +20,18 @@
   animation: fadeUp 1s ease-out 0.3s forwards;
 }
 
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .hero__title {
   font-size: 72px;
   margin: 250px auto 0 0;
 }
 
 .hero__image {
-  position: absolute;
-  bottom: 300px;
-  left: 0;
   margin: 0;
   width: 900px;
   height: 600px;
