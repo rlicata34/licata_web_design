@@ -12,6 +12,7 @@
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   padding: 0 0 100px;
   color: #fff;
@@ -23,28 +24,26 @@
 .hero__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .hero__title {
-  font-size: 72px;
-  margin: 250px auto 0 0;
+  font-size: 60px;
 }
 
 .hero__image {
   margin: 0;
-  width: 900px;
-  height: 600px;
+  width: 800px;
+  height: 533px;
 
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
 }
 
 .hero__description {
-  margin: 255px 0 0 auto;
   font-size: 26px;
   font-weight: 100;
   max-width: 400px;
+  margin-top: 200px;
 }
 
 .hero__button {

@@ -102,10 +102,7 @@
   color: #fff;
 }
 
-.nav__about:hover,
-.nav__portfolio:hover,
-.nav__services:hover,
-.nav__contact:hover {
+.nav__link:hover {
   transform: scale(1.1);
 }
 
