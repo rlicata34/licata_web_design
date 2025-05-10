@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import "../blocks/Header.css";
 
-function Header() {
+function Header({ handleMenuClick, activeModal, onClose }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,6 +22,14 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleButtonClick = () => {
+    if (activeModal === "") {
+      handleMenuClick();
+    } else {
+      onClose();
+    }
+  };
 
   return (
     <header className={`header ${scrolled ? "header_scrolled" : ""}`}>
@@ -62,6 +70,11 @@ function Header() {
             Contact
           </a>
         </div>
+        <button
+          className="header__button"
+          type="button"
+          onClick={handleButtonClick}
+        ></button>
       </nav>
     </header>
   );
