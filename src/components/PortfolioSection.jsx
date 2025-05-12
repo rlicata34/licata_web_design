@@ -1,9 +1,8 @@
-import React from "react";
 import projects from "../utils/projects.js";
 import useScrollFadeInClass from "../hooks/useScrollFadeInClass.js";
 import "../blocks/PortfolioSection.css";
 
-export default function PortfolioSection() {
+export default function PortfolioSection({ handlePreviewClick }) {
   const { ref, isVisible } = useScrollFadeInClass();
 
   return (
@@ -24,9 +23,10 @@ export default function PortfolioSection() {
           {projects.map((project, index) => (
             <div key={index} className="project__card">
               <img
-                src={project.imageUrl}
+                src={project.imageUrls[0]}
                 alt={project.title}
                 className="project__image"
+                onClick={() => handlePreviewClick(project)}
               />
               <div className="project__content">
                 <h3 className="project__title">{project.title}</h3>
