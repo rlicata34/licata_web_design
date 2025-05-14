@@ -42,7 +42,11 @@ export default function PortfolioSection({ handlePreviewClick }) {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="project__link"
+                  className={
+                    project.liveUrl === ""
+                      ? "project__link_hidden"
+                      : "project__link_visible"
+                  }
                 >
                   View Live →
                 </a>

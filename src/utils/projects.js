@@ -35,7 +35,7 @@ const projects = [
       aroundtheusNew,
       aroundtheusPreview,
     ],
-    liveUrls: "",
+    liveUrl: "",
     tags: [],
   },
 ];
