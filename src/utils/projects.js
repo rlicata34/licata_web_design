@@ -13,22 +13,27 @@ import aroundtheusPreview from "../assets/aroundus-preview.png";
 const projects = [
   {
     title: "PureVibes",
-    description: "Event finding app utilizing the ticketmaster API.",
+    type: "Full-stack event discovery app",
+    description:
+      "A responsive event discovery experience built around search, saved profiles, and Ticketmaster API data.",
     imageUrls: [purevibesMain, purevibesProfile, purevibesomeSearch],
     liveUrl: "",
-    tags: [],
+    tags: ["React", "API Integration", "Responsive UI"],
   },
   {
     title: "What To Wear App",
+    type: "Weather-based wardrobe app",
     description:
-      "Outfit configuration app based on the current weather of the user's location.",
+      "A weather-aware wardrobe tool that helps users choose and manage clothing based on local conditions.",
     imageUrls: [wtwrMain, wtwrLogin, wtwrProfile, wtwrSignup],
     liveUrl: "",
-    tags: [],
+    tags: ["React", "Express", "Weather API"],
   },
   {
     title: "Around The US",
-    description: "Blog app for travel documentation.",
+    type: "Interactive travel gallery",
+    description:
+      "A clean photo-sharing interface with editable profiles, post creation, preview states, and responsive layouts.",
     imageUrls: [
       aroundtheusMain,
       aroundtheusEdit,
@@ -36,7 +41,7 @@ const projects = [
       aroundtheusPreview,
     ],
     liveUrl: "",
-    tags: [],
+    tags: ["JavaScript", "Responsive Design", "UI Components"],
   },
 ];
 
