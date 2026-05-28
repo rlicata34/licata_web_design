@@ -39,7 +39,11 @@ function MenuModal({ onClose, activeModal, isOpen }) {
             <a href="#about" className="modal__link" onClick={onClose}>
               About
             </a>
-            <a href="#contact" className="modal__link" onClick={onClose}>
+            <a
+              href="#contact"
+              className="modal__link modal__link_cta"
+              onClick={onClose}
+            >
               Contact
             </a>
           </div>

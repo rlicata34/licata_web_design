@@ -34,10 +34,12 @@ function Header({ handleMenuClick, activeModal, onClose }) {
   return (
     <header className={`header ${scrolled ? "header_scrolled" : ""}`}>
       <nav className="nav">
-        <h1
+        <button
           className="animated-logo"
           id="logo"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          type="button"
+          aria-label="Scroll to top"
         >
           <span>L</span>
           <span>i</span>
@@ -54,7 +56,7 @@ function Header({ handleMenuClick, activeModal, onClose }) {
           <span>i</span>
           <span>g</span>
           <span>n</span>
-        </h1>
+        </button>
         <div className="nav__links">
           <a href="#services" className="nav__link">
             Services
@@ -66,15 +68,19 @@ function Header({ handleMenuClick, activeModal, onClose }) {
           <a href="#about" className="nav__link">
             About
           </a>
-          <a href="#contact" className="nav__link">
+          <a href="#contact" className="nav__link nav__link_cta">
             Contact
           </a>
         </div>
         <button
-          className="header__button"
+          className={`header__button ${
+            activeModal === "menu-modal" ? "header__button_active" : ""
+          }`}
           type="button"
           onClick={handleButtonClick}
-        ></button>
+          aria-label={activeModal === "menu-modal" ? "Close menu" : "Open menu"}
+          aria-expanded={activeModal === "menu-modal"}
+        />
       </nav>
     </header>
   );
