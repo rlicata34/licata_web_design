@@ -32,24 +32,32 @@ function HeroSection() {
   return (
     <section className="hero">
       <div className="hero__content">
-        <div className="hero__container">
+        <div className="hero__copy">
+          <p className="hero__eyebrow">Freelance Web Design & Development</p>
           <h1 className="hero__title">{hero.title}</h1>
+          <p className="hero__description">{hero.description}</p>
+          <div className="hero__actions">
+            <a
+              href={hero.buttonLink}
+              className="hero__button hero__button_primary"
+            >
+              {hero.buttonText}
+            </a>
+            <a href="#portfolio" className="hero__button hero__button_secondary">
+              View Work
+            </a>
+          </div>
+        </div>
 
-          {hero.image && (
+        {hero.image && (
+          <div className="hero__media">
             <img
-              src={urlFor(hero.image).width(1000).url()}
+              src={urlFor(hero.image).width(1200).url()}
               alt={hero.image.alt || "Hero image"}
               className="hero__image"
             />
-          )}
-        </div>
-
-        <div className="hero__container">
-          <p className="hero__description">{hero.description}</p>
-          <a href={hero.buttonLink} className="hero__button">
-            {hero.buttonText}
-          </a>
-        </div>
+          </div>
+        )}
       </div>
     </section>
   );
