@@ -28,12 +28,17 @@ function ContactSection() {
     >
       <div className="contact__content">
         <div className="contact__container">
-          <h2 className="contact__title">Contact Me</h2>
+          <p className="contact__eyebrow">Contact</p>
+          <h2 className="contact__title">Ready to improve your web presence?</h2>
           <p className="contact__text">
-            I'd love to hear from you.
-            <br />
-            Let's build something great together.
+            Tell me what you are building, updating, or trying to fix. I will
+            follow up so we can talk through the best next step.
           </p>
+          <div className="contact__trust-list">
+            <span>Free initial consultation</span>
+            <span>Small-business friendly scope</span>
+            <span>Clear communication from kickoff to launch</span>
+          </div>
         </div>
 
         <form name="contact" method="POST" className="form">
@@ -46,6 +51,7 @@ function ContactSection() {
                 className="form__input"
                 name="name"
                 required
+                autoComplete="name"
                 value={formData.name}
                 onChange={handleChange}
               />
@@ -66,6 +72,7 @@ function ContactSection() {
                 className="form__input"
                 name="email"
                 required
+                autoComplete="email"
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -83,14 +90,16 @@ function ContactSection() {
           <div className="form__container">
             <div className="form__input-wrapper">
               <input
+                id="phone"
                 className="form__input"
                 type="tel"
                 name="phone"
+                autoComplete="tel"
                 value={formData.phone}
                 onChange={handleChange}
-                required
               />
               <label
+                htmlFor="phone"
                 className={`form__label ${
                   formData.phone ? "form__label--active" : ""
                 }`}
@@ -105,9 +114,9 @@ function ContactSection() {
                 type="url"
                 className="form__input"
                 name="website"
+                autoComplete="url"
                 value={formData.website}
                 onChange={handleChange}
-                required
               />
               <label
                 htmlFor="website"
@@ -138,12 +147,12 @@ function ContactSection() {
               Project Details
             </label>
             <p className="form__text">
-              How can we help your with your web project? Please enter your
-              details in the above box.
+              How can I help with your web project? Share goals, timeline, or
+              anything you want improved.
             </p>
           </div>
           <button type="submit" className="form__submitbtn">
-            Submit
+            Send Inquiry
           </button>
         </form>
       </div>

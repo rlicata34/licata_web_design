@@ -12,14 +12,19 @@ function AboutSection() {
       id="about"
     >
       <div className="about__content">
-        <img
-          src={aboutImage}
-          alt="Image of business owner"
-          className="about__image"
-        />
+        <div className="about__media">
+          <img
+            src={aboutImage}
+            alt="Image of business owner"
+            className="about__image"
+          />
+        </div>
         <div className="about__container">
-          <h2 className="about__title">About Me</h2>
-          <p className="about__text">
+          <p className="about__eyebrow">About</p>
+          <h2 className="about__title">
+            Design-minded development for small business websites
+          </h2>
+          <p className="about__lead">
             Freelance web designer and full-stack software engineer.
           </p>
           <p className="about__text">
@@ -34,6 +39,11 @@ function AboutSection() {
             starting fresh or looking to update your existing site, let me help
             improve your global web presence.
           </p>
+          <div className="about__proof-list">
+            <span className="about__proof-item">Collaborative process</span>
+            <span className="about__proof-item">Responsive-first builds</span>
+            <span className="about__proof-item">Small business focused</span>
+          </div>
         </div>
       </div>
     </section>

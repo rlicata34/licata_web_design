@@ -12,9 +12,14 @@ function BackToTop() {
   return (
     <button
       className={`back-to-top ${isVisible ? "back-to-top--fade-up" : ""}`}
+      type="button"
       onClick={scrollToTop}
       ref={ref}
+      aria-label="Back to top"
     >
+      <span className="back-to-top__icon" aria-hidden="true">
+        ↑
+      </span>
       Back to top
     </button>
   );

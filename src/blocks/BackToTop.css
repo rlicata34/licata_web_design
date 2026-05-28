@@ -1,28 +1,61 @@
 .back-to-top {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   margin: 0 auto 50px;
-  padding: 0;
-  font-size: 20px;
-  font-weight: 300;
-  color: #000;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(0, 119, 181, 0.22);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0077b5;
   background-color: #fff;
-  border: none;
+  box-shadow: 0 10px 24px rgba(20, 40, 60, 0.08);
   cursor: pointer;
-  transition: opacity 1s ease;
+  transition: opacity 1s ease, background-color 0.3s ease,
+    border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
   opacity: 0;
+}
+
+.back-to-top__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  font-size: 16px;
+  line-height: 1;
+  transform: translateY(-1px);
 }
 
 .back-to-top--fade-up {
   opacity: 1;
 }
 
-.back-to-top:hover {
-  transform: scale(1.1);
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  background-color: #0077b5;
+  border-color: #0077b5;
+  color: #fff;
+  transform: translateY(-2px);
+  outline: none;
 }
 
 @media screen and (max-width: 1160px) {
   .back-to-top {
     margin-bottom: 30px;
-    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    transition: none;
+  }
+
+  .back-to-top:hover,
+  .back-to-top:focus-visible {
+    transform: none;
   }
 }
